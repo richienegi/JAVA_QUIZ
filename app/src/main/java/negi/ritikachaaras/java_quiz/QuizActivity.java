@@ -59,7 +59,6 @@ public class QuizActivity extends AppCompatActivity {
     TextView ans;
     Toolbar t1;
     Animation animation1;
-    AdView myads1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
