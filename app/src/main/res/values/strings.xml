@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Java Quiz</string>
+    <string name="Oak">Originally, Java was called as Oak from the name of that tree that grew outside the window of James Gosling. It was eventually changed to Java by 
+        Sun's marketing department when they found that name already register for a computer company.</string>
+    <string name="developed">Around 1992, James Gosling and his building a set-top box. They started by cleaning up C++ and wound up with a new language Java.
+    </string>
+    <string name="mascot">Duke was designed by Joe Palrang to represent a software agent that performed tasks for the user. A living, life-size Duke is a popular feature at every
+        JavaOne developer conference. And each year, Oracle releases a new Duke personality.</string>
+    <string name="Class">The "0xCafeBabe" magic number in the class files was named after the Cafe, where the gang of
+        Java developer used to go for coffee.</string>
+    <string name="interfac">Currently, Java practically runs on 3 billion plus smartphones, as well as 125 million TV sets and each Blu-Ray player. This language is continually ranked first
+        in the software developer rankings and also the best choice of programming languages.</string>
+    <string name="enterprises">95 percent of enterprises are using Java as their primary language. Which is more than
+        C and other languages put together.</string>
+    <string name="Pointer">There has no concept of pointer in Java because it doesn\'t need them for general purpose OOP programming.
+        Adding pointers to Java would undermine security and robustness and make the language more complex.</string>
+</resources>
