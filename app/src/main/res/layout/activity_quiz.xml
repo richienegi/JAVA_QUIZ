@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:weightSum="3"
     android:orientation="vertical"
-    android:background="@color/colorback"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
 
     tools:context=".QuizActivity">
 
@@ -18,9 +19,9 @@
         android:minHeight="?attr/actionBarSize">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="horizontal"
             android:weightSum="10">
 
             <LinearLayout
@@ -35,12 +36,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/text_view_question_count"
+                    android:fontFamily="serif"
                     android:freezesText="true"
                     android:text="Content : "
                     android:textColor="#fff"
-                    android:textSize="16dp"
-                    android:fontFamily="serif"
-                    />
+                    android:textSize="16dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -48,12 +48,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="5"
                 android:gravity="center_vertical|end"
-                android:paddingRight="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
 
                     <ImageView
@@ -66,175 +67,195 @@
                         android:id="@+id/text_view_countdown"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:freezesText="true"
-                        android:text="00:10"
                         android:fontFamily="serif"
+                        android:freezesText="true"
                         android:paddingLeft="4dp"
+                        android:text="00:10"
                         android:textColor="#fff"
-                        android:textSize="18dp"/>
+                        android:textSize="18dp" />
 
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
-    <ScrollView
+    <LinearLayout
+        android:layout_weight="3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:context=".QuizActivity">
+            android:layout_height="match_parent">
 
-            <android.support.v7.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="4dp"
-                app:cardPreventCornerOverlap="false"
-                app:cardUseCompatPadding="true">
+                android:orientation="vertical"
+                tools:context=".QuizActivity">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/text_view_score"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:freezesText="true"
-                        android:text="Score : 0"
-                        android:textColor="@color/textcolor"
-                        android:textSize="14dp"
-                        android:fontFamily="serif"/>
-
-                    <TextView
-                        android:id="@+id/text_view_question_count"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/text_view_score"
-                        android:freezesText="true"
-                        android:text="Question: 1/x"
-                        android:textColor="@color/textcolor"
-                        android:textSize="14dp"
-                        android:fontFamily="serif"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="4dp"
-                app:cardPreventCornerOverlap="false"
-                app:cardUseCompatPadding="true">
-
-                <TextView
-                    android:id="@+id/text_view_question"
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/radio_group"
-                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/card_color"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/text_view_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:freezesText="true"
+                            android:text="Score : 0"
+                            android:textStyle="bold"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14dp"
+                            android:fontFamily="serif"/>
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/text_view_question_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text_view_score"
+                            android:freezesText="true"
+                            android:text="Question: 1/x"
+                            android:textColor="@color/textcolor"
+                            android:textSize="14dp"
+                            android:fontFamily="serif"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/card_color"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/text_view_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/radio_group"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:freezesText="true"
+                        android:fontFamily="serif"
+                        android:text="here will bw the next Questions\n YOU can Check the qustions\n now"
+                        android:textColor="@android:color/black"
+                        android:textSize="18dp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/card_color"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <RadioGroup
+                        android:id="@+id/radio_group"
+                        android:padding="4dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+
+                        <RadioButton
+                            android:id="@+id/radio_button1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:freezesText="true"
+                            android:textSize="16dp"
+                            android:fontFamily="serif"
+                            android:text="Option1" />
+
+                        <RadioButton
+                            android:id="@+id/radio_button2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:freezesText="true"
+                            android:textSize="16dp"
+                            android:fontFamily="serif"
+                            android:text="Option2" />
+
+                        <RadioButton
+                            android:id="@+id/radio_button3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:freezesText="true"
+                            android:textSize="16dp"
+                            android:fontFamily="serif"
+                            android:text="Option3" />
+                    </RadioGroup>
+                </android.support.v7.widget.CardView>
+
+                <Button
+                    android:id="@+id/button_confirm_next"
+                    android:layout_width="300dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/interview_prepration_questions_of_java"
                     android:layout_marginTop="16dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:freezesText="true"
                     android:fontFamily="serif"
-                    android:text="here will bw the next Questions\n YOU can Check the qustions\n now"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp" />
-            </android.support.v7.widget.CardView>
+                    android:textSize="17dp"
+                    android:text="Confirm" />
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="4dp"
-                app:cardPreventCornerOverlap="false"
-                app:cardUseCompatPadding="true">
-
-                <RadioGroup
-                    android:id="@+id/radio_group"
-                    android:padding="4dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true">
-
-                    <RadioButton
-                        android:id="@+id/radio_button1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:freezesText="true"
-                        android:textSize="16dp"
-                        android:fontFamily="serif"
-                        android:text="Option1" />
-
-                    <RadioButton
-                        android:id="@+id/radio_button2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:freezesText="true"
-                        android:textSize="16dp"
-                        android:fontFamily="serif"
-                        android:text="Option2" />
-
-                    <RadioButton
-                        android:id="@+id/radio_button3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:freezesText="true"
-                        android:textSize="16dp"
-                        android:fontFamily="serif"
-                        android:text="Option3" />
-                </RadioGroup>
-            </android.support.v7.widget.CardView>
-
-            <Button
-                android:id="@+id/button_confirm_next"
-                android:layout_width="300dp"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button"
-                android:layout_marginTop="16dp"
-                android:freezesText="true"
-                android:fontFamily="serif"
-                android:textSize="17dp"
-                android:text="Confirm" />
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="15dp"
-                android:visibility="gone"
-                android:id="@+id/ans_card"
-                app:cardElevation="4dp"
-                app:cardPreventCornerOverlap="false"
-                app:cardUseCompatPadding="true">
-
-                <TextView
-                    android:id="@+id/ans"
-                    android:padding="4dp"
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/button_confirm_next"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:text="Ans:"
-                    android:fontFamily="serif"
-                    android:textColor="@color/textcolor"
-                    android:textSize="16dp" />
-            </android.support.v7.widget.CardView>
+                    app:cardCornerRadius="15dp"
+                    android:visibility="gone"
+                    android:id="@+id/ans_card"
+                    app:cardElevation="4dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/ans"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/button_confirm_next"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Ans:"
+                        android:fontFamily="serif"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16dp" />
+                </android.support.v7.widget.CardView>
 
 
-        </LinearLayout>
 
-    </ScrollView>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/quizactivity_banner"></com.google.android.gms.ads.AdView>
 
 </LinearLayout>

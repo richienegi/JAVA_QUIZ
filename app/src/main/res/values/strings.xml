@@ -1,17 +1,48 @@
 <resources>
+
     <string name="app_name">Java Quiz</string>
-    <string name="Oak">Originally, Java was called as Oak from the name of that tree that grew outside the window of James Gosling. It was eventually changed to Java by 
-        Sun's marketing department when they found that name already register for a computer company.</string>
-    <string name="developed">Around 1992, James Gosling and his building a set-top box. They started by cleaning up C++ and wound up with a new language Java.
-    </string>
-    <string name="mascot">Duke was designed by Joe Palrang to represent a software agent that performed tasks for the user. A living, life-size Duke is a popular feature at every
-        JavaOne developer conference. And each year, Oracle releases a new Duke personality.</string>
-    <string name="Class">The "0xCafeBabe" magic number in the class files was named after the Cafe, where the gang of
-        Java developer used to go for coffee.</string>
-    <string name="interfac">Currently, Java practically runs on 3 billion plus smartphones, as well as 125 million TV sets and each Blu-Ray player. This language is continually ranked first
-        in the software developer rankings and also the best choice of programming languages.</string>
-    <string name="enterprises">95 percent of enterprises are using Java as their primary language. Which is more than
-        C and other languages put together.</string>
-    <string name="Pointer">There has no concept of pointer in Java because it doesn\'t need them for general purpose OOP programming.
-        Adding pointers to Java would undermine security and robustness and make the language more complex.</string>
+    <!--<string name="app_id_demo">ca-app-pub-3940256099942544~3347511713</string>-->
+    <!--demoo-->
+    <string name="banner_demo">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="inter_demo">ca-app-pub-3940256099942544/1033173712</string>
+
+
+
+    <string name="admobe_ad_id">ca-app-pub-5013638152042731~2113665863</string>
+    <!--<string name="admobe_ad_id">@string/app_id_demo</string>-->
+
+
+    <!--done-->
+    <string name="mainactivity_banner">ca-app-pub-5013638152042731/9609012507</string>
+<!--    <string name="mainactivity_banner">@string/banner_demo</string>-->
+
+
+<!--    done-->
+    <string name="answerSheet">ca-app-pub-5013638152042731/3002147916</string>
+<!--    <string name="answerSheet">@string/banner_demo</string>-->
+
+<!--done-->
+    <string name="quizactivity_banner">ca-app-pub-5013638152042731/6261552604</string>
+<!--    <string name="quizactivity_banner">@string/banner_demo</string>-->
+
+
+    <string name="inter_finish">ca-app-pub-5013638152042731/2085745701</string>
+    <!--<string name="inter_finish">@string/inter_demo</string>-->
+
+    <string name="inter_1">ca-app-pub-5013638152042731/4841493873</string>
+  <!--  <string name="inter_1">@string/inter_demo</string>-->
+
+    <string name="inter_2">ca-app-pub-5013638152042731/7248165362</string>
+  <!--  <string name="inter_2">@string/inter_demo</string>-->
+
+
+
+    <string name="question"> Which of the following river is known as Dakshina Ganga?</string>
+    <string name="ans1"> A. Krishna</string>
+
+    <string name="ans2"> B. Mahanadi</string>
+
+    <string name="ans3">C. Godavari</string>
+
+    <string name="ans4">D. Cauvery</string>
 </resources>

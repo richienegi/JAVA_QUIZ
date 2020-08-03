@@ -28,8 +28,6 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
     @Override
     public void onBindViewHolder(@NonNull final ExampleViewHolder holder, final int position) {
         ExampleItem currentItem = mExampleList.get(position);
-
-        holder.relat.setBackgroundColor(Color.WHITE);
         holder.mTextView1.setText(currentItem.getMtext1());
         holder.relat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +37,6 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
 
             }
         });
-        holder.relat.setBackgroundColor(Color.WHITE);
 
     }
 
@@ -77,17 +74,13 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
                 @Override
                 public void onClick(View v) {
                     if (listener != null) {
-                        relat.setBackgroundColor(Color.WHITE);
 
                         int positon = getAdapterPosition();
                         if (positon != RecyclerView.NO_POSITION) ;
                     }
-                    relat.setBackgroundColor(Color.WHITE);
 
                 }
             });
-            relat.setBackgroundColor(Color.WHITE);
-
 
         }
     }
